@@ -1,7 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Briefcase, Code2, FolderGit2, GraduationCap } from "lucide-react";
 
-import { GithubCard } from "@/components/site/github-card";
 import { TerminalWindow } from "@/components/site/page-header";
 import { profile } from "@/content/profile";
 
@@ -23,14 +22,14 @@ const sections = [
   { to: "/sobre", title: "Sobre", desc: "Quem sou e as tecnologias deste site", icon: Code2 },
   { to: "/academico", title: "Experiência Acadêmica", desc: "Unicap e estudos complementares", icon: GraduationCap },
   { to: "/profissional", title: "Experiência Profissional", desc: "Onde já trabalhei", icon: Briefcase },
-  { to: "/projetos", title: "Projetos", desc: "Repositórios ao vivo do GitHub", icon: FolderGit2 },
+  { to: "/projetos", title: "Projetos", desc: "Projetos em destaque", icon: FolderGit2 },
 ] as const;
 
 function Index() {
   return (
     <div className="mx-auto max-w-6xl px-5">
-      <section className="grid items-center gap-10 pt-14 md:grid-cols-[1.3fr_1fr] md:pt-24">
-        <div className="fade-up">
+      <section className="pt-14 md:pt-24">
+        <div className="fade-up max-w-3xl">
           <p className="prompt font-mono text-sm text-muted-foreground">whoami</p>
           <h1 className="mt-5 text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl">
             Olá, eu sou <br />
@@ -48,10 +47,6 @@ function Index() {
             </Link>
           </div>
           <p className="mt-8 font-mono text-xs text-muted-foreground">📍 {profile.location}</p>
-        </div>
-
-        <div className="fade-up [animation-delay:150ms]">
-          <GithubCard />
         </div>
       </section>
 

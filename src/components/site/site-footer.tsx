@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 import { profile } from "@/content/profile";
 
@@ -10,9 +10,6 @@ export function SiteFooter() {
           <span className="text-primary">©</span> {new Date().getFullYear()} {profile.name}
         </p>
         <div className="flex items-center gap-4">
-          <a href={profile.links.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-primary">
-            <Github className="size-4" />
-          </a>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-primary">
             <Linkedin className="size-4" />
           </a>

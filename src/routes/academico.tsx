@@ -22,7 +22,7 @@ function Academico() {
   return (
     <div className="mx-auto max-w-4xl px-5">
       <PageHeader
-        command="git log --formacao"
+        command="cat ~/formacao"
         title="Experiência Acadêmica"
         description="Minha formação e os estudos que complementam a faculdade."
       />

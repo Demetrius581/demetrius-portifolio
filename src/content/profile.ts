@@ -96,21 +96,18 @@ export const featuredProjects: Project[] = [
   {
     name: "Portfólio Demetrius",
     description:
-      "Este site: currículo em React com rotas, CSS caprichado e integração com a API pública do GitHub.",
+      "Este site: currículo em React com rotas, CSS caprichado e visual de terminal.",
     tech: ["React", "TypeScript", "TanStack", "Tailwind CSS"],
-    link: "https://github.com/Demetrius581/portifolio-demetrius",
   },
   {
     name: "Vetores e Matrizes",
     description: "Exercícios de lógica em Java manipulando vetores e matrizes: leitura, busca, somas e ordenação.",
     tech: ["Java", "Lógica de programação"],
-    link: "https://github.com/Demetrius581/Vetores-e-matrizes-lista",
   },
   {
     name: "Lista de Matrizes e Vetores",
     description: "Resolução de uma lista de exercícios da faculdade sobre estruturas de dados básicas em Java.",
     tech: ["Java", "Estruturas de dados"],
-    link: "https://github.com/Demetrius581/Lista-de-matrizes-e-vetores",
   },
 ];
 
@@ -123,8 +120,7 @@ export const siteStack: Tech[] = [
   { name: "Vite", purpose: "Servidor de desenvolvimento e build", category: "Base" },
   { name: "TanStack Start", purpose: "Framework React full-stack com renderização no servidor (SSR)", category: "Framework" },
   { name: "TanStack Router", purpose: "Rotas baseadas em arquivos e navegação tipada", category: "Framework" },
-  { name: "TanStack Query", purpose: "Busca, cache e estados de carregamento das chamadas à API", category: "Dados" },
-  { name: "GitHub REST API", purpose: "API pública que fornece perfil e repositórios", category: "Dados" },
+  { name: "TanStack Query", purpose: "Cache e estados de carregamento de dados", category: "Dados" },
   { name: "Tailwind CSS v4", purpose: "Estilização com design tokens e utilitários CSS", category: "Estilo" },
   { name: "shadcn/ui + Radix UI", purpose: "Componentes acessíveis (botões, cards, badges)", category: "Estilo" },
   { name: "lucide-react", purpose: "Biblioteca de ícones", category: "Estilo" },
