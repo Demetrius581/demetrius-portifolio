@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Resume content lives in `src/content/profile.ts`; pages only render it, so content edits never touch route files.
+- GitHub API is called from the browser via TanStack Query (`src/lib/github.ts`), not in SSR loaders, to avoid the shared-IP unauthenticated rate limit.

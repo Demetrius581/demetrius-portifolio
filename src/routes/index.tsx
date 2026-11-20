@@ -1,23 +1,75 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Briefcase, Code2, FolderGit2, GraduationCap } from "lucide-react";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { GithubCard } from "@/components/site/github-card";
+import { TerminalWindow } from "@/components/site/page-header";
+import { profile } from "@/content/profile";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Demetrius Oliveira — Portfólio e Currículo" },
+      { name: "description", content: "Portfólio de Demetrius De Moura Silva Oliveira, estudante de Sistemas para Internet na Unicap." },
+      { property: "og:title", content: "Demetrius Oliveira — Portfólio e Currículo" },
+      { property: "og:description", content: "Currículo, experiências e projetos de Demetrius Oliveira." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const sections = [
+  { to: "/sobre", title: "Sobre", desc: "Quem sou e as tecnologias deste site", icon: Code2 },
+  { to: "/academico", title: "Experiência Acadêmica", desc: "Unicap e estudos complementares", icon: GraduationCap },
+  { to: "/profissional", title: "Experiência Profissional", desc: "Onde já trabalhei", icon: Briefcase },
+  { to: "/projetos", title: "Projetos", desc: "Repositórios ao vivo do GitHub", icon: FolderGit2 },
+] as const;
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="mx-auto max-w-6xl px-5">
+      <section className="grid items-center gap-10 pt-14 md:grid-cols-[1.3fr_1fr] md:pt-24">
+        <div className="fade-up">
+          <p className="prompt font-mono text-sm text-muted-foreground">whoami</p>
+          <h1 className="mt-5 text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl">
+            Olá, eu sou <br />
+            <span className="text-glow">Demetrius</span>
+            <span className="cursor" />
+          </h1>
+          <p className="mt-6 font-mono text-sm text-accent">{profile.role}</p>
+          <p className="mt-4 max-w-xl text-lg text-muted-foreground">{profile.bio}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/projetos" className="btn-terminal">
+              ver projetos <ArrowRight className="size-4" />
+            </Link>
+            <Link to="/sobre" className="btn-outline-terminal">
+              ./sobre
+            </Link>
+          </div>
+          <p className="mt-8 font-mono text-xs text-muted-foreground">📍 {profile.location}</p>
+        </div>
+
+        <div className="fade-up [animation-delay:150ms]">
+          <GithubCard />
+        </div>
+      </section>
+
+      <section className="mt-20">
+        <TerminalWindow title="ls ~/demetrius">
+          <div className="grid gap-3 sm:grid-cols-2">
+            {sections.map((s) => (
+              <Link key={s.to} to={s.to} className="panel panel-interactive group flex items-start gap-4 p-5">
+                <s.icon className="mt-0.5 size-5 shrink-0 text-primary" />
+                <div>
+                  <p className="font-semibold text-foreground group-hover:text-primary">{s.title}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </TerminalWindow>
+      </section>
     </div>
   );
 }
