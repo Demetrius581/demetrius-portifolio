@@ -1,26 +1,44 @@
-# Demetrius Portifolio
+# Portfólio — Demetrius De Moura Silva Oliveira
 
-Implement exactly the screenshot and nothing else
+Currículo e portfólio acadêmico feito em React, com visual de terminal escuro.
 
-This project was built with [Lovable](https://lovable.dev).
+## Páginas
 
-**Live app**: https://demetrius-portifolio.lovable.app
+- **Home** — apresentação e atalhos para as outras páginas
+- **Sobre** — quem sou e todas as tecnologias usadas no site
+- **Experiência Acadêmica** — Unicap (Sistemas para Internet) e estudos complementares
+- **Experiência Profissional** — Mediez, Smile Tecnologia e Cobra Rolamentos
+- **Projetos** — projetos em destaque
 
-## Build with Lovable
+## Tecnologias
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/60e52fc6-0b6d-4bbf-b242-1f42a1677dc0).
+React 19, TypeScript, Vite, TanStack Start, TanStack Router, TanStack Query, Tailwind CSS v4, shadcn/ui + Radix UI, lucide-react, Vitest, ESLint e Prettier.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Rodando no computador
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Você precisa do Node.js instalado ([instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
+git clone <link deste repositório>
+cd <nome do repositório>
 npm i
 npm run dev
 ```
+
+Depois abra o endereço que aparecer no terminal (geralmente `http://localhost:8080`).
+
+## Testes
+
+```sh
+npm run test
+```
+
+## Publicando na Vercel
+
+1. Acesse [vercel.com](https://vercel.com) e entre com a conta do GitHub.
+2. **Add New → Project** e escolha este repositório.
+3. Clique em **Import** e depois em **Deploy** — o link final fica em `seu-projeto.vercel.app`.
+
+## Sobre o projeto
+
+Este código foi desenvolvido com o [Lovable](https://lovable.dev) e sincronizado com este repositório.

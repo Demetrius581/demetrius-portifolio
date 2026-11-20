@@ -30,7 +30,7 @@ function Index() {
     <div className="mx-auto max-w-6xl px-5">
       <section className="pt-14 md:pt-24">
         <div className="fade-up max-w-3xl">
-          <p className="prompt font-mono text-sm text-muted-foreground">whoami</p>
+          <p className="prompt font-mono text-sm text-muted-foreground">cat quem-sou-eu.md</p>
           <h1 className="mt-5 text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl">
             Olá, eu sou <br />
             <span className="text-glow">Demetrius</span>

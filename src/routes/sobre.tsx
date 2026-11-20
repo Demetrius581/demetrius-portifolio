@@ -22,7 +22,7 @@ function Sobre() {
 
   return (
     <div className="mx-auto max-w-6xl px-5">
-      <PageHeader command="cat sobre.md" title="Sobre mim" description={profile.bio} />
+      <PageHeader command="cat sobre-mim.md" title="Sobre mim" description={profile.bio} />
 
       <TerminalWindow title="perfil.json" className="fade-up">
         <pre className="overflow-x-auto font-mono text-sm leading-relaxed">
@@ -38,7 +38,7 @@ function Sobre() {
       </TerminalWindow>
 
       <section className="mt-16">
-        <p className="prompt font-mono text-sm text-muted-foreground">cat package.json | grep dependencies</p>
+        <p className="prompt font-mono text-sm text-muted-foreground">cat tecnologias.json</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight">Tecnologias deste site</h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">
           Todas as tecnologias e módulos usados para desenvolver este app.
