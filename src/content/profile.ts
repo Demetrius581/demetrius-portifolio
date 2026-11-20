@@ -6,10 +6,7 @@ export const profile = {
   role: "Estudante de Sistemas para Internet · Desenvolvedor em formação",
   location: "Recife, PE",
   bio: "Estudante de Sistemas para Internet na Unicap, apaixonado por construir interfaces rápidas, acessíveis e bem cuidadas. Gosto de transformar problemas do dia a dia em produtos simples de usar.",
-  // Usuário do GitHub usado na integração com a API pública do GitHub.
-  githubUser: "Demetrius581",
   links: {
-    github: "https://github.com/Demetrius581",
     linkedin: "https://www.linkedin.com/",
     email: "seu.email@exemplo.com",
   },
